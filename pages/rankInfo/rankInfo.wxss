@@ -1,0 +1,5 @@
+/* pages/rankInfo/rankInfo.wxss */
+.weui-media-box__thumb {
+  width:45px; 
+  height: 60px;
+}

@@ -1,0 +1,60 @@
+<!--pages/rankInfo/rankInfo.wxml-->
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-tab">
+            <view class="weui-navbar">
+                <block wx:for="{{navtabs}}" wx:key="*this">
+                    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                        <view class="weui-navbar__title">{{item}}</view>
+                    </view>
+                </block>
+                <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+            </view>
+            <view class="weui-tab__panel">
+                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                  <view class="weui-panel weui-panel_access">
+                    <navigator wx:for="{{dayBooks}}" url="../bookInfo/bookInfo?id={{item._id}}&id={{item.title}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                      <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                        <image class="weui-media-box__thumb" src="http://statics.zhuishushenqi.com{{item.cover}}" />
+                      </view>
+                      <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                          <view class="weui-media-box__title">{{item.title}}</view>
+                          <view class="weui-media-box__desc">{{item.author}}</view>
+                          <view class="weui-media-box__desc">追书人数：{{item.latelyFollower}}  |  读者留存率: {{item.retentionRatio}}</view> 
+                      </view>
+                    </navigator>
+                  </view>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                  <view class="weui-panel weui-panel_access">
+                    <navigator wx:for="{{monthBooks}}" url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                      <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                        <image class="weui-media-box__thumb" src="http://statics.zhuishushenqi.com{{item.cover}}" />
+                      </view>
+                      <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                          <view class="weui-media-box__title">{{item.title}}</view>
+                          <view class="weui-media-box__desc">{{item.author}}</view>
+                          <view class="weui-media-box__desc">追书人数：{{item.latelyFollower}}  |  读者留存率: {{item.retentionRatio}}</view> 
+                      </view>
+                    </navigator>
+                  </view>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+                  <view class="weui-panel weui-panel_access">
+                    <navigator wx:for="{{totalBooks}}" url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                      <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                        <image class="weui-media-box__thumb" src="http://statics.zhuishushenqi.com{{item.cover}}" />
+                      </view>
+                      <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                          <view class="weui-media-box__title">{{item.title}}</view>
+                          <view class="weui-media-box__desc">{{item.author}}</view>
+                          <view class="weui-media-box__desc">追书人数：{{item.latelyFollower}}  |  读者留存率: {{item.retentionRatio}}</view> 
+                      </view>
+                    </navigator>
+                  </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+

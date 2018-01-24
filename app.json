@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/user/user",
+    "pages/find/find",
+    "pages/rank/rank",
+    "pages/category/category",
+    "pages/rankInfo/rankInfo",
+    "pages/bookInfo/bookInfo"
+  ],
+  "window": {
+    "backgroundTextStyle": "white",
+    "navigationBarBackgroundColor": "#00bfff",
+    "navigationBarTitleText": "书适阅读",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#00bfff"
+  },
+  "tabBar": {
+    "color": "#707070",
+    "selectedColor": "#FF0000",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "书架",
+        "iconPath": "images/tabBar/shelf_no.png",
+        "selectedIconPath": "images/tabBar/shelf_yes.png"
+      },
+      {
+        "pagePath": "pages/find/find",
+        "text": "发现",
+        "iconPath": "images/tabBar/search_no.png",
+        "selectedIconPath": "images/tabBar/search_yes.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "images/tabBar/user_no.png",
+        "selectedIconPath": "images/tabBar/user_yes.png"
+      }
+    ]
+  }
+}
